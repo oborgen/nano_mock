@@ -19,3 +19,13 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Test coverage
+coverage
+
+# Intellij IDEA
+*.iml
+.idea
+
+# macOS
+.DS_Store
