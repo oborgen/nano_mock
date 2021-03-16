@@ -88,7 +88,8 @@ testing purposes.
 This means boilerplate is introduced.
 Also, as Dart has introduced null safety, using code generation is a
 requirement to use Mockito.
-Additionally, as of writing, neither Mockito nor build_runner supports the
+Additionally, as of writing, neither Mockito nor
+[`build_runner`](https://pub.dev/packages/build_runner) supports the
 latest versions of certain packages.
 
 NanoMock aims to mitigate some of these issues by providing an alternative
