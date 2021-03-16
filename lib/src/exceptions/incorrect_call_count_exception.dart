@@ -1,5 +1,11 @@
+/// Thrown when a test expects `expectedCalls` call(s) to have been made
+/// but the actual number of calls is `actualCalls`,
+/// which differs from `expectedCalls`.
 class IncorrectCallCountException implements Exception {
+  /// The number of call expected to have been made to the mock.
   final expectedCalls;
+
+  /// The actual number of calls made to the mock.
   final actualCalls;
 
   const IncorrectCallCountException(
