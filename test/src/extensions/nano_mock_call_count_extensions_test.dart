@@ -1,9 +1,9 @@
 import 'package:test/test.dart';
 
-import '../../lib/nano_mock.dart';
+import '../../../lib/nano_mock.dart';
 
 void main() {
-  group("NanoMock", () {
+  group("NanoMockCallCountExtensions", () {
     group("called", () {
       test(
           "can mock one call and correctly assert that the function has " +

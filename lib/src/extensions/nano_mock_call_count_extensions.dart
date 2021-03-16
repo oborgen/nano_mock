@@ -1,5 +1,5 @@
-import '../nano_mock.dart';
-import 'nano_mock_call_count.dart';
+import '../../nano_mock.dart';
+import '../nano_mock_call_count.dart';
 
 /// Utility extensions on [NanoMockCallCount].
 extension NanoMockCallCountExtensions on NanoMockCallCount {
