@@ -1,6 +1,12 @@
 name: nano_mock
 
+description: >-
+  A lightweight mock library without any dependencies or requirements to use
+  code generation.
+
 version: 1.0.0
+
+repository: https://github.com/oborgen/nano_mock
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
