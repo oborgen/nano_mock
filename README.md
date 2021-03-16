@@ -10,6 +10,8 @@ generation.
 
 ## Usage
 
+### Tutorial
+
 Let's say you want to unit test this function:
 
 ```
@@ -27,7 +29,7 @@ This function calls a given callback and return its result if the sum of `x` and
 Otherwise, if the sum of `x` and `y` is less than or equal to `10`, this
 function returns `null`.
 
-### Step 1
+#### Step 1
 
 Create a `NanoMock` instance:
 
@@ -38,7 +40,7 @@ final mock = NanoMock<bool>();
 The generic type corresponds to the return type of the callback you want to
 mock.
 
-### Step 2
+#### Step 2
 
 Instruct `mock` to return a given value when called with a given list
 of arguments:
@@ -50,18 +52,20 @@ final verify = mock.when(true, [5, 7]);
 You need to keep a reference to the return value if you want to verify that
 the function has been called with the given arguments.
 
-### Step 3
+#### Step 3
 
 Call the function provided with the mock:
 
-```_exampleImplementation(5, 7, (x, y) => mock([x, y]))```
+```
+_exampleImplementation(5, 7, (x, y) => mock([x, y]));
+```
 
 Notice that the mock cannot be passed directly to the function.
 Instead, you have to wrap the call with a function that places the arguments in
 a list that is then passed to the mock.
 This is so code generation becomes unnecessary.
 
-### Step 4
+#### Step 4
 
 Verify that the mock has been called by the function:
 
@@ -74,6 +78,31 @@ Alternatively, if you expect the callback to not have been called, you can call
 
 ```
 verify.neverCalled();
+```
+
+### Miscellaneous
+
+Certain functionality are not covered by the tutorial yet are described below.
+
+#### Mocking functions returning void
+
+Functions returning void can be mocked by calling `whenVoid`:
+
+```
+final verify = mock.whenVoid([1, 3]);
+```
+
+In this case, no return value is specified.
+
+#### Accessing the number of calls
+
+The number of calls to a mock can be accessed without performing any
+assertions by reading `calls`:
+
+```
+_exampleImplementation(5, 7, (x, y) => mock([x, y]));
+
+print(verify.calls); // Prints 1
 ```
 
 ## Motivation
