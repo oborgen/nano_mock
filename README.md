@@ -22,10 +22,10 @@ T? exampleImplementation<T>(int x, int y, T Function(int x, int y) callback) {
 }
 ```
 
-This function calls a given callback and return its result if the sum of x and
-y is greater than 10.
-Otherwise, if the sum of x and y is less than or equal to 10, then this
-function returns null.
+This function calls a given callback and return its result if the sum of `x` and
+`y` is greater than `10`.
+Otherwise, if the sum of `x` and `y` is less than or equal to `10`, this
+function returns `null`.
 
 ### Step 1
 
