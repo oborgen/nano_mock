@@ -75,3 +75,23 @@ Alternatively, if you expect the callback to not have been called, you can call
 ```
 verify.neverCalled();
 ```
+
+## Motivation
+
+The go-to library for mocking calls in Dart is currently
+[Mockito](https://pub.dev/packages/mockito).
+Mockito does a great job when it comes to mocking entire objects and the
+developers behind NanoMock uses Mockito for various purposes.
+However, when dealing with callbacks that does not require a certain interface
+to use, Mockito requires users to create new classes to be used only for
+testing purposes.
+This means boilerplate is introduced.
+Also, as Dart has introduced null safety, using code generation is a
+requirement to use Mockito.
+Additionally, as of writing, neither Mockito nor build_runner supports the
+latest versions of certain packages.
+
+NanoMock aims to mitigate some of these issues by providing an alternative
+mocking library, which can mock callbacks without any dependencies or code
+generation requirements. This means NanoMock is compatible with any Dart
+project supporting SDK version 2.12.0 or higher.
