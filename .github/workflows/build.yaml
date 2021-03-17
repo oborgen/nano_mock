@@ -46,6 +46,10 @@ jobs:
       # Call flutter test and collect coverage.
       - name: Run tests
         run: melos exec "flutter test --coverage"
+      
+      # Run the example.
+      - name: Run example
+        run: melos exec "dart example/main.dart"
 
       # Publish coverage information to codecov.io.
       - name: Publish coverage

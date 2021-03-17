@@ -1,7 +1,3 @@
-// This module should not be viewed as a test of the library but rather as an
-// example of how the library can be used when writing tests.
-// However, it's run together with the actual tests.
-
 import 'package:test/test.dart';
 
 import '../lib/nano_mock.dart';
