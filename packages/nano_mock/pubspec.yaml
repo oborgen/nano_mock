@@ -4,7 +4,7 @@ description: >-
   A lightweight mock library without any dependencies or requirements to use
   code generation.
 
-version: 1.0.0
+version: 1.0.1
 
 repository: https://github.com/oborgen/nano_mock
 
