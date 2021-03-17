@@ -23,6 +23,9 @@ doc/api/
 # Test coverage
 coverage
 
+# Documentation
+doc
+
 # Intellij IDEA
 *.iml
 .idea
