@@ -3,10 +3,10 @@
 /// which differs from `expectedCalls`.
 class IncorrectCallCountException implements Exception {
   /// The number of call expected to have been made to the mock.
-  final expectedCalls;
+  final int expectedCalls;
 
   /// The actual number of calls made to the mock.
-  final actualCalls;
+  final int actualCalls;
 
   const IncorrectCallCountException(
     this.expectedCalls,
