@@ -1,7 +1,8 @@
 import '../nano_mock.dart';
 import '../nano_mock_call_count.dart';
 
-/// Utility extensions on [NanoMock].
+/// Utility extensions on [NanoMock] that can be used when the return type is
+/// `void`.
 extension NanoMockVoidExtensions on NanoMock<void> {
   /// A `void` reference.
   static final void _void = (() {})();
