@@ -19,6 +19,7 @@ class NanoMock<T> {
   /// The mocks set up for the [NanoMock] instance.
   final List<_Mock<T>> _mocks;
 
+  /// Creates a new [NanoMock], which will not have any mocks yet.
   NanoMock() : _mocks = [];
 
   /// Adds a mock to the [NanoMock] instance, which makes it so if the instance
