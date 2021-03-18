@@ -1,6 +1,7 @@
 # 1.0.2
 
 * Added correct type declarations to the fields in InvalidNanoMockCallException.
+* Added more documentation.
 
 # 1.0.1
 

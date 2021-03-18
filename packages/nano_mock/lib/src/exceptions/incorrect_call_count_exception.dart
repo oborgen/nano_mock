@@ -8,11 +8,16 @@ class IncorrectCallCountException implements Exception {
   /// The actual number of calls made to the mock.
   final int actualCalls;
 
+  /// Creates a new [IncorrectCallCountException] describing that
+  /// `expectedCalls` call(s) were expected but `actualCalls` call(s) have
+  /// actually been made.
   const IncorrectCallCountException(
     this.expectedCalls,
     this.actualCalls,
   );
 
+  /// Creates a string representation of the [IncorrectCallCountException].
+  @override
   String toString() {
     return "Expected ${_formatCalls(expectedCalls)} to have been made " +
         "but ${_formatCalls(actualCalls)} has actually been made.";
